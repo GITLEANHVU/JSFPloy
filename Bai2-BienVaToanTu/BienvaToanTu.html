@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biến Kiểu Dữ Liệu và Toán Tử</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // bien va khai bao bien
+    var bienKieuSoInt = 10;
+    var bienKieuSoDouble = 1.50;
+    var bienKieuBoolean = true;
+    var bienKieuMang = [];
+    var bienKieuMang2 = new Array();
+    var bienKieuObject = {
+      name: "Lê Anh Vũ",
+      age: 18.4,
+      showInf: function() {
+        document.write("Tôi tên là: ", this.name, " <br /> ", "Tuổi: ", this.age);
+      }
+    };
+    var bienKieuString = "hello guy" + ' hoăc dau nhay don';
+   
+    // Kiểu số: -------- kiểm tra biến là số hay không, số = return false, không = return true.
+    alert(isNaN("4")); // false
+    alert(isNaN("four")); // true
+    //một số đối tượng Math JS cung cấp cho kiểu số
+    alert(Math.random() * 100);
+    alert(Math.abs(-100));
+    alert(Math.pow(2, 3));
+    alert(Math.round(2.6)); // làm tròn tăng lên
+    alert(Math.floor(2.6)); // làm tròng giảm xuống
+
+    // Kiểu chuỗi ký tự: --------- một số ký tự đặt biệt cho kiểu chuỗi.
+    alert("Hello\t \'hi\'\nGoodbye!");
+    var x = "Toi la Stringg.";
+    alert(x.length); // trả về số ký tự trong chuổi
+    alert(x.substring(0, 3)); // cắt từ vị trí 0 đến 3
+    alert(x.concat("This is concat method"));
+    alert(x.toUpperCase());
+    alert(x.toLowerCase());
+
+    // Kiểu Boolean: 
+    var xx = true;
+    var yy = false;
+    alert(xx === yyy);
+
+    // Kiểu mảng: 
+    var convat = new Array();
+    convat[0] = "Meo";
+    convat[0] = "Ho";
+    convat[0] = "Voi";
+    var convat2 = new Array("Meo", "Ho", "Voi");
+
+    // Kiểu Giá trị Null và Underfined # null khác với ""
+
+
+    // Ép kiểu.
+    var x = String(100);
+    alert(typeof(x));
+    var xString = "100";
+    var y = Number(xString);
+    alert(typeof(y));
+
+
+
+
+
+    // ----------------- Toán Tử -----------------
+    
+    // toán tử số học: +, -, *, /, %
+    // toán tử logic: &, |, ^, !.
+    // toán tử quan hệ và toán tử bằng: >, <, >=, <=, ==, !=
+    // toán tử một ngôi: +, -, ++, --;
+
+
+    // hàm Prompt lấy giá trị người dùng nhập.
+    var x = prompt("Vui lòng nhập giá trị vào :) ");
+    alert(x);
+
+
+  </script>
+</body>
+</html>

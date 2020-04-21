@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lập Trình Hướng Đối Tượng Và Mô Hình BOM</title>
+</head>
+<body>
+  <!-- 
+    #Phương Thức Lập Trình.
+    - Có hơn 25 phương thức lập trình:
+      mỗi phương thúc giải quyết một vấn về
+      một số phương thức khó áp dụng trong thực tiễn lập trình
+      một số phương thúc lập trình chỉ được hưởng ứng bởi một nhóm người hay trong một thời gian ngắn
+    - Những phương thức lập trình phổ biến:
+      lập trình hướng sự kiện
+      lập trình hướng thành phần
+      lập trình cấu trúc
+      lập trình hướng đối tượng.
+      (lập trình hướng đối tượng được phát triển rộng rãi hơn cả.)
+    
+    #Phương thức lập trình hướng đối tượng.
+
+    ## Lập trình hướng đối tượng:
+      - đối tượng: là mọi thứ trong cuộc sống ( đồ vật, sự vật, ...)
+        vd: Quả bóng, cái bàn, oto, bông hoa, con người, nhà máy, ...
+      - mỗi đối tượng có đặc tính và hành động riêng.
+      - Ý tưởng chủ đạo của phương thúc lập trình hướng đối tượng: Mô phỏng cuộc sống thực trong lập trình.
+    ## THuộc tính và phương thức của đối tượng:
+      - Mèo có những đặc tính:
+        + màu: tam thể. 
+        + nặng: 2kg.
+        + móng: sắc.
+      - Mèo có những hành động:
+        + Bắt chuột
+        + liếm lông.
+      # - Trong lập trình: đặt tính được gọi là thuộc tính, hành động được gọi là phương thức. 
+    ## Lớp:
+      - các đối tượng có cùng thuộc tính và phương thức được gom lại thành một lớp
+      - Hay: lớp định nghĩa tập hợp các đối tượng có cùng thuộc tính và phương thức.
+    
+    ## Tạo đối tượng: dùng từ khóa new
+      - var tendoituong = new Object;
+    ## Thêm và truy cập đến thuộc tính
+      - Thêm: tendoituong.tenthuoctinh = giatri;
+      - Truy cập: tendoituong.tenthuoctinh;
+    ## Thêm và gọi phương thức:
+      - Thêm method: tendoituong.tenphuongthuc = function(){...}
+      - Gọi method: tendoituong.tenphuongthuc();
+    ## Tạo khuôn mẫu cho đối tượng ?
+    var hoaDao = new Object;
+    hoaDao.mau = "Hong";
+    hoaDao.soCanh = "5";
+    hoaDao.toaHuong = function() {
+      alert("Toi co mau hong, toi dang toa huong !");
+    } .... và còn nhiều lòa hoa khác, và bất tiện nếu làm hòa vậy.
+    ==>> cần có hướng khác đó là: Tạo một khuông mẫu chung (Lớp);
+
+    ## Định nghĩa lớp đối tượng:
+    function tenlop (tenbien1, tenbien2, ...) {
+      tenthuoctinh1 = tenbien1;
+      tenthuoctinh22 = tenbien2;
+      tenphuongthuc = function() {
+        // viet ma cho phương thuc o day
+      }
+    }
+    vd: function Hoa(mauHoa, soCanhHoa) {
+      this.mau = mauHoa;
+      this.soCanh = soCanhHoa;
+      this.toaHuong = function() {
+        alert("Toi co mau ", this.mau, " toi dang toa hương");
+      }
+    }
+    ## Tạo đối tượng và sử dụng đối tượng:
+      -Tạo đối tượng:
+      #tenlop["tendoituong"] = new tenlop(giatri1, giatri2 ...);
+      Hoa["dao"] = new Hoa("Hong", "5");
+      Hoa["hong"] = new Hoa("do", "10");
+      Hoa["cuc"] = new Hoa("Hong", "20");
+      Hoa["lan"] = new Hoa("tim", "3");
+      - Truy cập đến thuộc tính và phương thức của đối tượng:
+      tenlop["tendoituong"].tenthuoctinh
+      tenlop["tendoituong"].tenphuongthuc
+    ## Thao tác với đối tượng trong lớp:
+      # - lặp qua các đối tượng
+      for (var x in Hoa) {
+        Hoa[x].toaHuong();
+      }
+      # - tìm một đối tượng trong thuộc lớp
+      if("Dao" in Hoa) {
+        alert("Doi tuong dao da duoc tao");
+      } else {
+        alert("Doi tuong dao chua duoc tao");
+      }
+      # - thêm thuộc tính cho đối tượng thuộc lớp:
+      if ("Dao" in Hoa) {
+        Hoa["Dao"].bieuTuong = "mua xuan";
+      }
+      alert("Hoa dao bieu tuong cho" + Hoa["Dao"].bieuTuong);
+   -->
+
+   <script>
+     // định nghĩa lớp đôi tượng
+     function Hoa(mauHoa, soCanhHoa) {
+      this.mau = mauHoa;
+      this.soCanh = soCanhHoa;
+      this.toaHuong = function() {
+        document.write("Tôi có màu ", this.mau, " Tôi đang tỏa hương");
+      }
+     }
+     // tao lớp đối tượng và truy cập lớp đối tượng
+     Hoa["Hong"] = new Hoa("Hồng", "5");
+     Hoa["Hong"].mau;
+     Hoa["Hong"].soCanh;
+     Hoa["Hong"].toaHuong();
+     var lan = new Hoa("tím", "3");
+     lan.mau;
+     lan.soCanh;
+     lan.toaHuong();
+   </script>
+</body>
+</html>

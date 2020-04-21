@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bai tap 2 lab 3</title>
+  <style>
+    button {
+      width: 100px; 
+      height: 100px; 
+      text-align: center;
+      color:blue; 
+      font-size: 23px; 
+      font-family: monospace;
+    }
+    button:hover {
+      box-shadow: 0.5px 0.5px 5px rgb(123, 165, 165);
+    }
+  </style>
+</head>
+<body>
+  <button onclick="play();">Chơi</button>
+  <script>
+    function play(){
+      var ka = prompt("Ban muon doan tu khoang : ");
+      var kb = prompt("den: ");
+
+      var dem = 0;
+
+      do{
+        
+          var key = prompt("Nhap gia tri doan: ");
+          do{
+            var value = Math.round(Math.random() * kb + 1);
+            console.log(value);
+          } while (value < ka);
+          if (value === key) {
+            alert("chuc mung ");
+            break;
+          }
+        dem++;
+        console.log(dem);
+      } while(dem < 3);
+    }
+  </script>
+</body>
+</html>

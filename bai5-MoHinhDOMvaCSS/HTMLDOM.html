@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mo Hinh DOM va CSS</title>
+  <!-- <script>
+    function checkHref() {
+        // var p = document.getElementsByTagName("p");
+        // p[0].style.backgroundColor = "#3333ccc";
+        var  linkNode = document.getElementById("link");
+        alert(linkNode.href);
+      }
+  </script> -->
+</head>
+<body>
+  <!-- <p>How are you?</p>
+  <p>I'm fine!</p> -->
+
+  <!-- <div id="dHoa">
+    <p>Hoa Hong</p>
+    <p>Hoa Lan</p>
+  </div> -->
+
+  <!-- <button onclick="event.preventDefault(); hienThi();">Click de hien thi anh</button>
+  <div id="anhDiv"></div>
+  -->
+
+  <p id="pText">Thiet lap style cho nhieu phan tu p</p>
+  <p id="p1">Thanh phan 1</p>
+  <p id="p2">Thanh phan 2</p>
+  <p id="p3">Thanh phan 3</p>
+  <p id="p4">Thanh phan 4</p>
+    <script> 
+    
+    // Các thuộc tính của node.
+    /** 
+      - x là đối tượng node.
+      - x.innerHTML: giá trị văn bản của x
+      - x.nodeName: Tên của x
+      - x.nodeValue: giá trị của x
+      - x.nodeType: kiểu của Node.
+      - x.parentNode: Node cha của x
+      - x.childNodes: các node con của x
+      - x.attributes: các node thuộc tính của  x
+    */
+    // Demo truy cập thuộc tính của Node.
+    // var pHoa = document.getElementById("dHoa");
+    
+    // document.write("Ten node: " + pHoa.nodeName + "<br />");
+    // document.write("Gia tri cua node: " + pHoa.nodeValue + "<br />");
+    // document.write("Node cha: " + pHoa.parentNode.nodeName + "<br />");
+    // document.write("Node con dau tien: " + pHoa.firstChild.nodeName+ "<br />");
+    // document.write("Node con thu hai: " + pHoa.childNodes[1].childNodes[0].nodeValue + "<br />");
+    // pHoa.childNodes[1].innerText = "Hoa phuong vi";
+    
+    // demo getElementById and getElementByTagName
+    // function hienThi() {
+    //   var node = document.getElementById("anhDiv");
+    //   node.innerHTML = "<img src='hoano.jpg' height='200px' width='200px'/>";
+    // }
+    // var p = document.getElementsByTagName("p");
+    // p[0].style.backgroundColor = "blue";
+    // p[1].style.backgroundColor = "darkred";
+      
+    // Demo dieu huong qua cac node
+    // var divHoa = document.getElementById("hoa");
+    
+    // var pHoaHong = divHoa.firstChild;
+    // alert(pHoaHong.nextSibling.childNodes[0].nodeValue);
+
+    // var pHoaHong = divHoa.firstElementChild;
+    // alert(pHoaHong.nextSibling.nextSibling.childNodes[0].nodeValue);
+
+    // // tao them cac node element
+    // var newElement = document.createElement("p");
+    // document.body.appendChild(newElement);
+    // newElement.appendChild(document.createTextNode("Hello World"));
+    // // thiet lap thuoc tinh
+    // newElement.setAttribute("id","newElement");
+    // document.body.appendChild(newElement);
+    // newElement.appendChild(document.createTextNode("Hello World"));
+    // var ne = document.getElementById("newElement");
+    // alert(ne.innerText);
+
+    // xoa cac node element
+    // document.body.removeChild(ne);
+    // hoac document.body.removeChild(newElement);
+
+    // // thiet lap style cho nhieu thanh phan
+    // var pAr = document.getElementsByTagName("p");
+    // for (let i = 0; i < pAr.length; i++) {
+    //   if (i % 2=== 0){
+    //     pAr[i].style.background = "blue";
+    //   } else {
+    //     pAr[i].style.background = "red";
+    //   }
+    // }
+
+    
+  </script>
+</body>
+</html>

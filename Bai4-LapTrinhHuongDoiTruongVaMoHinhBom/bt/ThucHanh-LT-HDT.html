@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thực hành lập trình hướng đối tượng</title>
+</head>
+<body>
+  <script>
+    function LoaiCay(ten, tuoi) {
+      this.tenCay = ten;
+      this.tuoiCay = tuoi;
+      this.show = function () {
+        document.write("Cay ", this.tenCay, " Co do tuoi la: ", this.tuoiCay);
+        }
+    }
+    var cayCam = new LoaiCay("Cam", 4);
+    var cayQuyt = new LoaiCay("Quyt", 1);
+    var cayChanh = new LoaiCay("Chanh", 2);
+
+    cayCam.show();
+    cayChanh.show();
+    cayQuyt.show();
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bai tap 2</title>
+</head>
+<body>
+  <script>
+    // var Meo = new Object();
+    // Meo.trongLuong = 10;
+    // Meo.batChuoi = function(chuot) {
+    //   Meo.trongLuong += chuot;
+    // }
+
+    // var Chuot = new Object();
+    // Chuot.trongLuong = 15;
+
+//3
+    function Meo(trongLuong){
+      this.trongLuong = trongLuong;
+      this.batChuot = function (conchuot) {
+        this.trongLuong += conchuot;
+      }
+    }
+//4
+    function Chuot (trongLuong){
+      this.trongLuong = trongLuong;
+    }
+//5
+    var meo = new Meo(200);
+//6
+    var chuot1 = new Chuot(200);
+    var chuot2 = new Chuot(300);
+    var chuot3 = new Chuot(400);
+//7
+    meo.batChuot(chuot1.trongLuong);
+    meo.batChuot(chuot2.trongLuong);
+    meo.batChuot(chuot3.trongLuong);
+console.log(meo.trongLuong);
+  </script>
+</body>
+</html>

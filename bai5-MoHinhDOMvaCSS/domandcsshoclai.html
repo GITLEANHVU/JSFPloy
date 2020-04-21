@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoc lai DOM and CSS</title>
+</head>
+<body>
+  <!-- <div id="hoa">
+    <p>Hoa Lan</p>
+    <p>Hoa Hong</p>
+  </div> -->
+  <h1>Cua hang chocola</h1>
+  <h2>danh sach mon hang</h2>
+  <table border="1" cellpadding="5px" cellspacing="1px">
+    <tr>
+      <td>Chocolate Covered Cherries 1</td>
+      <td>$<span id="money">23.31</span></td>
+      <td><button id="them" onclick="them();">Them</button></td>
+    </tr>
+
+    <tr>
+      <td>Chocolate Covered Cherries 2</td>
+      <td>$<span id="money">23.32</span></td>
+      <td><button id="them" onclick="them();">Them</button></td>
+    </tr>
+
+    <tr>
+      <td>Chocolate Covered Cherries 3</td>
+      <td>$<span id="money">23.33</span></td>
+      <td><button id="them" onclick="them();">Them</button></td>
+    </tr>
+
+    <tr>
+      <td>Chocolate Covered Cherries 4</td>
+      <td>$<span id="money">23.34</span></td>
+      <td><button id="them" onclick="them();">Them</button></td>
+    </tr>
+
+    <tr>
+      <td>Chocolate Covered Cherries 5</td>
+      <td>$<span id="money">23.35</span></td>
+      <td><button id="them" onclick="them();">Them</button></td>
+    </tr>
+
+    <tr>
+      <td>Chocolate Covered Cherries 6</td>
+      <td>$<span id="money">23.36</span></td>
+      <td><button id="them" onclick="them();">Them</button></td>
+    </tr>
+
+    <tr>
+      <td>Chocolate Covered Cherries 7</td>
+      <td>$<span id="money">23.37</span></td>
+      <td><button id="them" onclick="them();">Them</button></td>
+    </tr>
+  </table>
+  <h2>Mon hang duoc chon</h2>
+  <table id="giohang" border="1">
+
+  </table>
+  <div id="tien"></div>
+ <script>
+    // các thuộc tính của node:
+    // * x là đối tượng node:
+    // x.innerHTML : giá trị văn bản của x.
+  //  var x = document.getElementById("hoa").nodeName;
+  //  document.write(x);
+  function them() {
+    var x = document.getElementById("money");
+    var y = document.getElementById("money").innerText;
+    console.log(x.appendChild(document.createElement("tr")));
+    console.log(x.appendChild(document.createTextNode("hello world")));
+    console.log(x)
+  }
+ </script>
+
+</body>
+</html>

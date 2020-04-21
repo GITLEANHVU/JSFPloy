@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cấu Trúc Điều Khiển, Hàm và Xử Lý Sự Kiện.</title>
+</head>
+<body>
+  <script type="text/javascript">
+    /*
+    - Kiến thức bài cũ:
+      + Biến và kiểu biến.
+      + Ép kiểu dữ liệu
+      + Khai báo biến.
+      + toán tử
+    */
+
+    // cấu  trúc điều khiển.
+    // if(false) {
+
+    // } else if(true) {
+
+    // } else {
+
+    // }
+    // switch (1) {
+    //   case 1: break;
+    //   case 2: break;
+    //   default: break;
+    // }
+    // loops
+    // var x = 1;
+    // while (x < 10) {
+    //   x++;
+    // }
+    // var x = 1;
+    // do {
+    //   x++;
+    // } while(x < 10);
+    // for(var x = 0; x < 10; x++) {
+    //   document.write(x,"<br />")
+    // }
+
+
+    // Hàm (function)
+    // function hamA() { // đây gọi là định nghĩa hàm.
+    //   document.writeln("Hello World !");
+    // }
+    // function hamB (numA, numB) {
+    //   return numA + numB;
+    // }
+    //  hàm hộp thoại thông điệp, true nếu ok, false nếu Cancel
+    // confirm("Bạn chắc chắn muốn xóa chứ ?");
+    // VD:: 
+    // function xacNhan(traloi) {
+    //   var ketQua = "";
+    //   if(traloi === true) {
+    //     ketQua = "Tuyệt vời. Chúc ban chiến thắng!";
+    //   } else {
+    //     ketQua = "Hẹn gặp lại bạn nhé!";
+    //   }
+    //   return ketQua;
+    // }
+
+    // var BienTraLoi = confirm("bạn sẽ chơi game chứ ?");
+    // var thongbao = xacNhan(BienTraLoi);
+    // alert(thongbao);
+
+    // Biến cục bộ : biến khai báo trong hàm.
+    // biến toàn cục: biến ngoài hàm.
+
+
+    // --------------- xử lý sự kiện ---------//
+
+    // #-onClick: được kích hoạt khi nhấn chuột vào một element.
+    // #-onLoad và on Unload: được kích hoạt khi người dùng vào hoặc thoát,
+    // khỏi trang web. 
+    // #-onFocus, onBlur, onChange: được  kích hoạt khi các trường nhận được,
+    // focus, mất focus, hay được thay đổi giá trị. 
+    // #-onMouseOver: kích hoạt khi người dùng di chuột lên một element HTML trên form.
+
+    // vd: 
+    function hienThiAnh(value) {
+      if (value === "dog") {
+        document.write("<img src='imgs/dog.jpg' width='200px' height='200px'/>");
+      } else {
+        document.write("<img src='imgs/fake-dog.jpg' />");
+      }
+    }
+
+    // Phương thúc xử lý các sự kiện thời gian. chúng thuộc đối tượng window
+
+    // thực hiện công việc sau khoảng thời gian trong tương lai.
+    var t = setTimeout("alert('hi');", 1000);
+    // clearTimeout : hủy bỏ setTimeout trước đó.
+
+    // thực hiện lặp công việc sau khoản thời gian .
+    var t = setInterval("alert('hello');", 10000);
+  </script>
+  <div onclick="alert('hello world !'); alert('hello world demo two!');">click me</div>
+  <button onclick="hienThiAnh('dog')">dog</button>
+  <button onclick="hienThiAnh('fake-dog')">fake-dog</button>
+</body>
+</html>

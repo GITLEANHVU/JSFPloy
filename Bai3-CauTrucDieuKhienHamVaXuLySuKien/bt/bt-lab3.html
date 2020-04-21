@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bai tap lab 3</title>
+  <style>
+    button {
+      padding: 5px;
+      margin: 10px;
+      width: 50px;
+      height: 50px;
+      box-shadow: 1px 2px black;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="getValue(7);">7</button>
+  <button onclick="getValue(8);">8</button>
+  <button onclick="getValue(9);">9</button>
+  <button onclick="getValue('/');">/</button> <br />
+  <button onclick="getValue(4);">4</button>
+  <button onclick="getValue(5);">5</button>
+  <button onclick="getValue(6);">6</button>
+  <button onclick="getValue('x');">x</button> <br />
+  <button onclick="getValue(1);">1</button>
+  <button onclick="getValue(2);">2</button>
+  <button onclick="getValue(3);">3</button>
+  <button onclick="getValue('+');">+</button> <br />
+  <button onclick="getValue(0);">0</button>
+  <button onclick="getValue('.');">.</button>
+  <button onclick="tinh();">=</button>
+  <button onclick="getValue('-');">-</button>
+  <script>
+      var num1 = 0;
+      var num2 = 0;
+      var dem = 0;
+      var pheptinh;
+      function getValue(x) {
+        dem++;
+        // lay so thu nhat
+        if (dem === 1 && x >= '0' && x <= '9'){
+          num1 = x;
+          console.log("num1 = ",num1);
+        } else if (dem === 2 ){
+          pheptinh = x;
+          console.log(pheptinh);
+        } else if (dem === 3 && x >= '0' && x <= '9') {
+          num2 = x;
+          console.log("Num2 = ",num2);
+        } else {
+          dem = 0;
+          console.log("nhap sai!");
+        }
+      }
+      function tinh() {
+        dem = 0;
+          if (num1 !== -1 && num2 !== -1){
+          switch(pheptinh) {
+            case '+': console.log(num1 + num2); break;
+            case '-': console.log(num1 - num2); break;
+            case 'x': console.log(num1 * num2); break;
+            case '/': console.log(num1 / num2); break;
+            default: console.log("Nhap sai phep tinh!!");
+          }
+          num1 = 0;
+          num2 = 0;
+        }
+      }
+  </script>
+</body>
+</html>

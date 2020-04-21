@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bai tap 4</title>
+</head>
+<body>
+  <button onclick="moCuaSoMoi();">Mo cua so moi</button><br>
+  <button onclick="dongCuaSoMoi();">Dong cua so moi</button><br>
+  <button onclick="kiemTra();">Kiem tra cua so moi dong chua</button><br>
+  <script>
+//1
+    function moCuaSoMoi() {
+      if (window.navigator.appName === "Netscape") {
+        window.open("", "Netscap","statusbar = yes, width = 100, height = 100");
+        document.write(window.navigator.appVersion);
+      } else {
+        window.open("", "Netscap","toolbar = yes, statusbar = yes, width = 550, height = 550");
+      }
+      document.write(window.navigator.appName);
+    }
+  </script>
+</body>
+</html>
